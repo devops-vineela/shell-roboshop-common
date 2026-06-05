@@ -1,7 +1,7 @@
 source ./common.sh
 app_name=mongodb
 check_root
-cp /home/ec2-user/shell-roboshop/mongo.repo /etc/yum.repos.d/mongo.repo
+cp $script_dir/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copying mongo.repo file"
 
 dnf install mongodb-org -y &>> $LOG_FILE
